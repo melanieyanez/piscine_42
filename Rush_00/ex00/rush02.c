@@ -6,7 +6,7 @@
 /*   By: abarras <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 14:36:28 by abarras           #+#    #+#             */
-/*   Updated: 2022/09/03 14:37:05 by abarras          ###   ########.fr       */
+/*   Updated: 2022/09/03 17:14:35 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rushy(int x, int y);
 
 void	rush00(int x, int y)
 {
-	if (!(x == 0 || y == 0))
+	if ((x > 0) && (y > 0))
 	{
 		rushx(x);
 		rushy(x, y);

@@ -6,7 +6,7 @@
 /*   By: abarras <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 09:49:05 by abarras           #+#    #+#             */
-/*   Updated: 2022/09/03 14:34:26 by abarras          ###   ########.fr       */
+/*   Updated: 2022/09/03 17:26:28 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@ void	ft_putchar(char chat);
 
 int	main(void)
 {
-	rush00(0, 5);
+	rush00(8, 5);
 	return (0);
 }
