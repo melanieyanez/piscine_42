@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test5.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 14:12:17 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/02 14:43:28 by myanez-p         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 
-char	*ft_strrev(char	*str)
+int	ft_strlen(char	*str)
 {
 	int	count;
 	
@@ -23,7 +11,7 @@ char	*ft_strrev(char	*str)
 		count++;
 	}
 	printf("le nombre de caracteres de ma chaine est %d", count);
-	return (str);
+	return (count);
 }
 
 int	main()
@@ -31,6 +19,6 @@ int	main()
 	char	*a;
 	
 	a = "abcdefghijklmnopqrstuvwxyz";
-	ft_strrev(a);
+	ft_strlen(a);
 	return (0);
 }

@@ -1,21 +1,26 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 11:57:02 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/02 12:23:36 by myanez-p         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include <stdio.h>
 
-int	ft_strlen(char	*str)
+int     ft_strlen(char *str)
 {
+        int	count;
 
+        count = 0;
+        while (*str != '\0')
+        {
+		str++;
+		count++;
+        }
+        printf("Le nombre de caracteres est %d\n", count);
+	return (count);
 }
 
-int	main(void)
+
+int     main()
 {
-	ft_strlen();
+        char   *a;
+
+        a = "Melanie";
+        ft_strlen(a);
+        return (0);
 }
+

@@ -21,11 +21,11 @@ void	ft_putstr(char	*str)
 	}
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char	*ptr;
 
 	ptr = "Foxes forever";
 	ft_putstr(ptr);
 	return (0);
-}*/
+}
