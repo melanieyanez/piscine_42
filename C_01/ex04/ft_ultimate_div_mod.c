@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 09:12:01 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/02 09:35:39 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/05 10:34:52 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void	ft_ultimate_div_mod(int	*a, int	*b)
 	b = 3;
 	printf("a vaut %d et b vaut %d\n", a, b);
 	ft_ultimate_div_mod(&a, &b);
-	printf("La division de a par b donne %d et le reste de la division est %d", a, b);
+	printf("Le resultat est  %d et le reste est %d", a, b);
 	return (0);
 }*/

@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 17:19:50 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/05 10:28:45 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/05 12:14:03 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/05 19:55:21 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include <stdio.h>
 
-void	ft_ft(int	*nbr)
+char	*ft_strcpy(char *dest, char *src)
 {
-	*nbr = 42;
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	return (dest);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	int	n;
+	char	*ptr_src;
 
-	ft_ft(&n);
-	printf("%d\n", n);
-}*/
+	ptr_src = "Foxes Forever";
+	char	ptr_dest[] = "aaaaaaaaaaaaa";
+
+	printf("%s", ptr_dest);
+	ft_strcpy(ptr_dest, ptr_src);
+	printf("%s", ptr_dest);
+	return (0);
+}

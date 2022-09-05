@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 09:36:13 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/02 11:56:38 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/05 10:35:44 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	ft_putstr(char	*str)
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	*ptr;
 
 	ptr = "Foxes forever";
 	ft_putstr(ptr);
 	return (0);
-}
+}*/

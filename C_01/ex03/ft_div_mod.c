@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 20:57:07 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/02 09:09:12 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/05 10:33:14 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	ft_div_mod(int a, int b, int	*div, int	*mod)
 	a = 10;
 	b = 3;
 	ft_div_mod(a, b, &div, &mod);
-	printf("La division de a par b donne %d et le reste de la division est %d", div, mod);
+	printf("Le resultat est  %d et le reste est  %d", div, mod);
 }*/

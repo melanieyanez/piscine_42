@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 17:19:50 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/05 10:28:45 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/05 16:06:27 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/05 19:51:02 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include <stdio.h>
 
-void	ft_ft(int	*nbr)
+int	ft_str_is_numeric(char *str)
 {
-	*nbr = 42;
+	if (*str == '\0')
+		return (1);
+	while (*str != '\0')
+	{
+		if (!(*str >= 48 && *str <= 57))
+		{
+			return (0);
+		}
+		str++;
+	}
+	return (1);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	int	n;
+	int	result;
+	char	*tab = "12345";
 
-	ft_ft(&n);
-	printf("%d\n", n);
-}*/
+	result = ft_str_is_numeric(tab);
+	printf("%d", result);
+	return (0);
+}

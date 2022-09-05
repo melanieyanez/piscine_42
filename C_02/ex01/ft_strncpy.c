@@ -1,44 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 19:08:51 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/05 10:30:21 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/05 13:11:53 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/05 19:53:41 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include <stdio.h>
 
-void	ft_ultimate_ft(int	*********nbr)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	*********nbr = 42;
+	unsigned int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	int	n;
-	int	*ptr1;
-	int	**ptr2;
-	int	***ptr3;
-	int	****ptr4;
-	int	*****ptr5;
-	int	******ptr6;
-	int	*******ptr7;
-	int	********ptr8;
-	int	*********ptr9;
+	char	*ptr_src;
+	char	ptr_dest[] = "aaaaaaaaaaaaa";
 
-	ptr1 = &n;
-	ptr2 = &ptr1;
-	ptr3 = &ptr2;
-	ptr4 = &ptr3;
-	ptr5 = &ptr4;
-	ptr6 = &ptr5;
-	ptr7 = &ptr6;
-	ptr8 = &ptr7;
-	ptr9 = &ptr8;
-	ft_ultimate_ft(ptr9);
-	printf("%d\n", n);
-}*/
+	n = 10;
+	ptr_src = "Foxes Forever";
+	printf("%s", ptr_dest);
+	ft_strncpy(ptr_dest, ptr_src, n);
+	printf("%s", ptr_dest);
+	return (0);
+}

@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 17:19:50 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/05 10:28:45 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/05 17:36:42 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/05 19:45:51 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include <stdio.h>
 
-void	ft_ft(int	*nbr)
+char	*ft_strupcase(char *str)
 {
-	*nbr = 42;
+	while (*str != '\0')
+	{
+		if (*str >= 97 && *str <= 122)
+		{
+			*str = *str - 32;
+		}
+		str++;
+	}
+	return (str);
 }
 
-/*int	main(void)
-{
-	int	n;
+int	main(void)
+{	
+	char	tab[] = "Foxes Forever";
 
-	ft_ft(&n);
-	printf("%d\n", n);
-}*/
+	printf("%s\n", tab);
+	ft_strupcase(tab);
+	printf("%s", tab);
+	return (0);
+}
