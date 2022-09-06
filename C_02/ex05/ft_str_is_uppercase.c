@@ -6,11 +6,11 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 16:25:38 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/05 19:49:37 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/06 10:34:56 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 int	ft_str_is_uppercase(char *str)
 {
@@ -27,7 +27,7 @@ int	ft_str_is_uppercase(char *str)
 	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	result;
 	char	*tab = "FOXESFOREVER";
@@ -35,4 +35,4 @@ int	main(void)
 	result = ft_str_is_uppercase(tab);
 	printf("%d", result);
 	return (0);
-}
+}*/

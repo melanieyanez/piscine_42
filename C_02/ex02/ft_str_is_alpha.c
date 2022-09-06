@@ -6,11 +6,11 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 13:58:17 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/05 19:52:24 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/06 10:30:48 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 int	ft_str_is_alpha(char *str)
 {
@@ -27,7 +27,7 @@ int	ft_str_is_alpha(char *str)
 	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	result;
 	char	*tab = "Foxes Forever";
@@ -35,4 +35,4 @@ int	main(void)
 	result = ft_str_is_alpha(tab);
 	printf("%d", result);
 	return (0);
-}
+}*/

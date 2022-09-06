@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 16:36:22 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/06 10:36:15 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/06 20:41:07 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/06 21:17:41 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+ #include <stdio.h>
 
-int	ft_str_is_printable(char *str)
+char	*ft_strstr(char *str, char *to_find)
 {
-	if (*str == '\0')
-		return (1);
-	while (*str != '\0')
+	int	i;
+	int j;
+
+	i = 0;
+	if (to_find[i] == '\0')
+		return (str);
+	
+	j = 0;
+	while (str[i] != '\0')
 	{
-		if (!(*str >= 32 && *str <= 126))
+		if (str[j] == to_find[i])
 		{
-			return (0);
-		}
-		str++;
+			while (to_find[j] != '\0')
+
+
+		}	
+		j++;
 	}
-	return (1);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	int	result;
-	char	*tab = "\n";
+	char	str[32] = "Les renards, c'est les meilleurs";
+	char	to_find[7] = "renards";
+	
+	ft_strstr(str, to_find);
 
-	result = ft_str_is_printable(tab);
-	printf("%d", result);
-	return (0);
-}*/
+}

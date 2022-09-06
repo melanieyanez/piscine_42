@@ -6,11 +6,11 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 17:54:42 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/05 19:42:50 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/06 15:48:37 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 void	if_min(char *str)
 {
@@ -42,6 +42,9 @@ void	if_maj(char *str)
 
 char	*ft_strcapitalize(char *str)
 {
+	char	*str_ptr;
+
+	str_ptr = str;
 	if (*str >= 'a' && *str <= 'z')
 		*str = *str - 32;
 	str++;
@@ -51,15 +54,15 @@ char	*ft_strcapitalize(char *str)
 		if_maj(str);
 		str++;
 	}
-	return (str);
+	return (str_ptr);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char	tab[] = "---salut, 7777777comMent tu vas ? 42mots quarante-deux; cinquante+et+un";
+	char	tab[] = "---sut, 777comMent tu vs ? 42mts quate-deux; cinqu";
 
 	printf("%s\n", tab);
 	ft_strcapitalize(tab);
 	printf("%s", tab);
 	return (0);
-}
+}*/
