@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 20:25:45 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/06 20:38:59 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/07 12:33:33 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	unsigned int	j;
 
 	i = 0;
-	while(dest[i] != '\0')
+	while (dest[i] != '\0')
 		i++;
-	j=0;
+	j = 0;
 	while (src[j] != '\0' && j < nb)
 	{
 		dest[i] = src[j];
@@ -28,9 +28,8 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		j++;
 	}	
 	dest[i] = '\0';
-	return(dest);
+	return (dest);
 }
-
 
 int	main(void)
 {
@@ -42,5 +41,5 @@ int	main(void)
 	ft_strncat(s1, s2, nb);
 	printf("%s\n", s1);
 	printf("%d", s1[40]);
-	return(0);
+	return (0);
 }

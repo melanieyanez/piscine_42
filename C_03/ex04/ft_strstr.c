@@ -6,39 +6,51 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 20:41:07 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/06 21:17:41 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/07 12:39:20 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <stdio.h>
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
-	int j;
+	int	j;
+	char	*ptr;
 
+	ptr = NULL;
 	i = 0;
 	if (to_find[i] == '\0')
 		return (str);
-	
-	j = 0;
 	while (str[i] != '\0')
 	{
-		if (str[j] == to_find[i])
-		{
-			while (to_find[j] != '\0')
-
-
-		}	
-		j++;
+		if (str[i] == to_find[0])
+		{	
+			j = 0;
+			while (to_find[j] == str[i + j])
+			{
+				if (to_find[j + 1] == '\0')
+				{	
+					return (&str[i]);
+				}
+				j++;
+			}
+		}
+		i++;
 	}
+	return (ptr);
 }
 
 int	main(void)
 {
-	char	str[32] = "Les renards, c'est les meilleurs";
-	char	to_find[7] = "renards";
-	
-	ft_strstr(str, to_find);
+	char	str[33] = "Les renards, c'est les meilleurs";
+	char	to_find[8] = "renards";
+	char	*resultmyfct;
+	char	*resultbifct;
 
+	resultmyfct = ft_strstr(str, to_find);
+	resultbifct = strstr(str, to_find);
+	printf("%s\n%s", resultmyfct, resultbifct);
+	return (0);
 }

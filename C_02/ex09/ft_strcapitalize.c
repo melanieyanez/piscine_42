@@ -6,11 +6,11 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 17:54:42 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/06 15:48:37 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/07 10:54:59 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include <stdio.h>
 
 void	if_min(char *str)
 {
@@ -57,12 +57,12 @@ char	*ft_strcapitalize(char *str)
 	return (str_ptr);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	char	tab[] = "---sut, 777comMent tu vs ? 42mts quate-deux; cinqu";
+	char	tab[] = "---sut, 777comMent [tu ~vs ? 42mts {quate-deux; cinqu";
 
 	printf("%s\n", tab);
 	ft_strcapitalize(tab);
 	printf("%s", tab);
 	return (0);
-}*/
+}
