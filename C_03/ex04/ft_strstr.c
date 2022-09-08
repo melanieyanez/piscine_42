@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 20:41:07 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/07 12:39:20 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/07 16:27:49 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*ptr;
 
 	ptr = NULL;
@@ -42,7 +42,7 @@ char	*ft_strstr(char *str, char *to_find)
 	return (ptr);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str[33] = "Les renards, c'est les meilleurs";
 	char	to_find[8] = "renards";
@@ -53,4 +53,4 @@ int	main(void)
 	resultbifct = strstr(str, to_find);
 	printf("%s\n%s", resultmyfct, resultbifct);
 	return (0);
-}
+}*/

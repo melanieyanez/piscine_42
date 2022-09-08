@@ -6,11 +6,12 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 20:25:45 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/07 12:33:33 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/07 16:27:40 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
@@ -31,15 +32,16 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	return (dest);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char	s1[41] = "Les renards, ";
-	char	s2[28] = "c'est les meilleurs du monde";
+	char			s1[41] = "Les renards, ";
+	char			s2[] = "c'est les meilleurs du monde";
 	unsigned int	nb;
+
 
 	nb = 19;
 	ft_strncat(s1, s2, nb);
 	printf("%s\n", s1);
-	printf("%d", s1[40]);
+	printf("%d", s1[20]);
 	return (0);
-}
+}*/

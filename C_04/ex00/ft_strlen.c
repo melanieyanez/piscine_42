@@ -1,46 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 19:29:17 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/07 16:27:19 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/05 09:03:59 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/05 10:36:37 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-char	*ft_strcat(char *dest, char *src)
+int	ft_strlen(char *str)
 {
-	int	i;
-	int	j;
+	int	count;
 
-	i = 0;
-	while (dest[i] != '\0')
+	count = 0;
+	while (*str != '\0')
 	{
-		i++;
+		str++;
+		count++;
 	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (count);
 }
 
-/*int	main(void)
+/*int     main()
 {
-	char	s1[20] = "Les marmottes, ";
-	char	s2[] = "c'est les meilleurs";
+        char   *a;
 
-	ft_strcat(s1, s2);
-	printf("%s\n", s1);
-	printf("%d", s1[32]);
-	return (0);
+        a = "Melanie";
+        ft_strlen(a);
+        return (0);
 }*/
