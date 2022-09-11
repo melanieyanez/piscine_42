@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 18:24:18 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/08 19:34:45 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/10 14:26:36 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	if (n == 0)
 		return (0);
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n -1)
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n - 1)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

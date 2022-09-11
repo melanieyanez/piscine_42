@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 12:50:34 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/11 15:41:08 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/10 20:47:02 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/11 12:08:58 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_sqrt(int nb)
 {
 	int	i;
 
-	i = 0;
-	while (s1[i] != '\0' && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	i = 1;
+	while (i != nb)
+	{	
+		if (nb / i == i)
+			return (i);
+		i ++;
+	}
+	return (0);
 }
 
 /*int	main(void)
 {
-	char	s1[] = "abcde";
-	char	s2[] = "abcde1";
-	int		resultmyfct;
-	int		resultbifct;
-
-	resultmyfct = ft_strcmp(s1, s2);
-	resultbifct = strcmp(s1, s2);
-	printf("%d\n%d", resultmyfct, resultbifct);
-	return (0);
+	printf("%d", ft_sqrt(20));
 }*/

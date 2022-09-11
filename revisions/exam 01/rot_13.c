@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   rot_13.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 12:50:34 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/11 15:41:08 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/09 14:04:35 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/10 11:03:40 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	main(int argc, char *argv[])
 {
-	int	i;
+	int i;
+	int j;
+	(void) argc;
 
+	if (argc != 2)
+	{
+		write(1, "\n", 1);
+		return (0);
+	}
 	i = 0;
-	while (s1[i] != '\0' && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-}
-
-/*int	main(void)
-{
-	char	s1[] = "abcde";
-	char	s2[] = "abcde1";
-	int		resultmyfct;
-	int		resultbifct;
-
-	resultmyfct = ft_strcmp(s1, s2);
-	resultbifct = strcmp(s1, s2);
-	printf("%d\n%d", resultmyfct, resultbifct);
+	while (argv[1][i] != '\0')
+	{
+		if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+			argv[1][i] = (((argv[1][i] - 97) + 13) % 26) + 97;
+		if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+			argv[1][i] = (((argv[1][i] -65) + 13) % 26) + 65;
+		write(1, &argv[1][i], 1);
+		i ++;
+	}
+	write(1, "\n", 1);
 	return (0);
-}*/
+}

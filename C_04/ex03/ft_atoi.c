@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 14:32:39 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/08 20:08:31 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/10 17:18:03 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,21 @@
 int	ft_atoi(char *str)
 {
 	int	i;
-	int	countneg;
 	int	result;
 	int	sign;
-	
-	sign = 1;
-	i = 0;
-	countneg = 0;
-	result = 0;
-	while (str[i] == ' ' || str[i] == '\n' ||  str[i] == '\t' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-		i ++;
 
+	i = 0;
+	result = 0;
+	sign = 1;
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+			i ++;
 	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			countneg ++;
+			sign = sign * -1;
 		i ++;
 	}
-	if (countneg % 2 == 1)
-		sign = - 1;
 	while (str[i] != '\0')
 	{
 		if (str[i] >= '0' && str[i] <= '9')
@@ -46,10 +42,10 @@ int	ft_atoi(char *str)
 	return (sign * result);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	*str;
 
-	str = "  '   8- -2147483648";
+	str = "\t --+++++4836-das8";
 	printf("%d", ft_atoi(str));
-}
+}*/
