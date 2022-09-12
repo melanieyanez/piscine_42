@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/10 20:47:02 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/12 16:48:18 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/12 13:59:00 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/12 16:54:23 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int	ft_sqrt(int nb)
+char	*ft_strdup(char *src)
 {
+	char	*dest;
 	int	i;
 
-	i = 1;
-	if (nb < 1)
-		return (0);
-	while (i <= nb / 2 && i <= 46341)
-	{	
-		if (i * i == nb)
-			return (i);
+	dest = malloc(sizeof(src) + 1);
+	
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
 		i ++;
 	}
-	return (0);
+	dest[i] = '\0';
+	return(dest);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	printf("%d\n", ft_sqrt(26));
-	printf("%d\n", ft_sqrt(292219953));
-}*/
+	char	src[] = "Les renards sont vraiment les plus forts";
+
+	printf("%s\n", ft_strdup(src));
+}

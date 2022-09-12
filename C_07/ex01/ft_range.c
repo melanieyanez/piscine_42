@@ -1,35 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/10 20:47:02 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/12 16:48:18 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/12 15:32:55 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/12 17:38:28 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-int	ft_sqrt(int nb)
+int	*ft_range(int min, int max)
 {
+	int	*tab;
 	int	i;
 
-	i = 1;
-	if (nb < 1)
-		return (0);
-	while (i <= nb / 2 && i <= 46341)
-	{	
-		if (i * i == nb)
-			return (i);
+	tab = malloc(sizeof(int)*(max - min));
+	
+	if (min >= max)
+		return (NULL);
+
+	i = 0;
+	while (i < (max - min))
+	{
+		tab[i] = min + i;
 		i ++;
 	}
-	return (0);
+	return (tab);
 }
 
-/*int	main(void)
+int	main (void)
 {
-	printf("%d\n", ft_sqrt(26));
-	printf("%d\n", ft_sqrt(292219953));
-}*/
+	int	 *tab;
+	int	i;
+
+	tab = ft_range(12, 45);
+	i = 0;
+	while (i < 33)
+	{
+		printf("%d\n", tab[i]);
+		i ++;
+	}
+	printf("%p\n", ft_range(12, 45));
+}

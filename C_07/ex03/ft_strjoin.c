@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/10 20:47:02 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/12 16:48:18 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/12 18:51:39 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/12 19:52:49 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_sqrt(int nb)
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int	i;
+	char	*tab;
+	
+	tab = malloc(sizeof(char)*size);
 
-	i = 1;
-	if (nb < 1)
-		return (0);
-	while (i <= nb / 2 && i <= 46341)
-	{	
-		if (i * i == nb)
-			return (i);
+	i = 0;
+	while (*strs[i])
+	{
+		j = 0;
+		while (strs[i][j])
+		{
+			tab[i][j] = 
+
+
+
+			k ++;
+			}
+			j ++;
+		}
+		write(1, sep[0], 1);
 		i ++;
 	}
-	return (0);
 }
-
-/*int	main(void)
-{
-	printf("%d\n", ft_sqrt(26));
-	printf("%d\n", ft_sqrt(292219953));
-}*/

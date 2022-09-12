@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 10:52:09 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/11 17:19:51 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/12 18:21:36 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_is_prime(int nb)
 	i = 2;
 	if (nb == 1 || nb == 0)
 		return (0);
-	while (i != nb - 1)
+	while (i <= nb / i)
 	{
 		if (nb % i == 0)
 			return (0);
