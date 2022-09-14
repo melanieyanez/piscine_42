@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:32:55 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/12 17:38:28 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/13 11:35:13 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@ int	*ft_range(int min, int max)
 	int	*tab;
 	int	i;
 
-	tab = malloc(sizeof(int)*(max - min));
-	
+	tab = malloc(sizeof(*tab) * (max - min));
 	if (min >= max)
-		return (NULL);
-
+	{
+		tab = NULL;
+		return (tab);
+	}
 	i = 0;
 	while (i < (max - min))
 	{
@@ -33,17 +34,17 @@ int	*ft_range(int min, int max)
 	return (tab);
 }
 
-int	main (void)
+/*int	main(void)
 {
-	int	 *tab;
+	int	*tab;
 	int	i;
 
-	tab = ft_range(12, 45);
+	tab = ft_range(12, 42);
 	i = 0;
 	while (i < 33)
 	{
 		printf("%d\n", tab[i]);
 		i ++;
 	}
-	printf("%p\n", ft_range(12, 45));
-}
+	printf("%p\n", ft_range(12, 42));
+}*/

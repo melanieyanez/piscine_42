@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 13:59:00 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/13 11:35:31 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/14 13:29:07 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/14 14:27:21 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-char	*ft_strdup(char *src)
+typedef struct s_point
 {
-	char	*dest;
-	int		i;
-	int		size;
+	int	x;
+	int	y;
 
-	size = 0;
-	while (src[size] != '\0')
-		size ++;
-	dest = malloc(sizeof(*src) * size);
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i ++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-/*int	main(void)
-{
-	char	src[] = "Les renards sont vraiment les plus forts";
-
-	printf("%s\n", ft_strdup(src));
-}*/
+}	t_point;
+#endif

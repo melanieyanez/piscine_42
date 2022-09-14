@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 13:59:00 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/13 11:35:31 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/13 13:44:07 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/13 18:28:21 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "ft_boolean.h"
 
-char	*ft_strdup(char *src)
+void	ft_putstr(char *str)
 {
-	char	*dest;
-	int		i;
-	int		size;
-
-	size = 0;
-	while (src[size] != '\0')
-		size ++;
-	dest = malloc(sizeof(*src) * size);
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i ++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	while (*str)
+		write(1, str++, 1);
 }
 
-/*int	main(void)
+t_bool	ft_is_even(int nbr)
 {
-	char	src[] = "Les renards sont vraiment les plus forts";
+	return ((EVEN(nbr)) ? TRUE : FALSE);
+}
 
-	printf("%s\n", ft_strdup(src));
-}*/
+int	main(int argc, char **argv)
+{
+	(void)argv;
+	if (ft_is_even(argc - 1) == TRUE)
+		ft_putstr(EVEN_MSG);
+	else
+		ft_putstr(ODD_MSG);
+	return (SUCCESS);
+}

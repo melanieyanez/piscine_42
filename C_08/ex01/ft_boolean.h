@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 13:59:00 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/13 11:35:31 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/13 13:16:34 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/13 18:35:38 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-char	*ft_strdup(char *src)
-{
-	char	*dest;
-	int		i;
-	int		size;
+# include <unistd.h>
 
-	size = 0;
-	while (src[size] != '\0')
-		size ++;
-	dest = malloc(sizeof(*src) * size);
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i ++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
+# define TRUE 1
+# define FALSE 0
+# define EVEN_MSG "I have an even number of arguments."
+# define ODD_MSG "I have an odd number of arguments."
+# define SUCCESS 0
+# define EVEN(VAR) ((VAR % 2) == 0 ? 1 : 0)
 
-/*int	main(void)
-{
-	char	src[] = "Les renards sont vraiment les plus forts";
-
-	printf("%s\n", ft_strdup(src));
-}*/
+typedef int	t_bool;
+#endif
