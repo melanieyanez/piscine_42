@@ -1,22 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   rev_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 13:13:43 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/15 19:39:26 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/15 10:40:30 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/15 11:09:42 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <unistd.h>
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+char	*ft_rev_print(char *str)
+{
+	int	i;
 
-#endif
+	i = 0;
+	if (str[i] == '\0')
+		write(1, "\n", 1);
+	while (str[i])
+	{
+		i ++;
+	}
+	while (--i > -1)
+	{
+		write(1, &str[i], 1);
+	}
+	write(1, "\n", 1);
+	return (str);
+}
+
+int	main (int argc, char *argv[])
+{
+	if (argc != 2)
+		write(1, "\n", 1);
+	else
+		ft_rev_print(argv[1]);
+}

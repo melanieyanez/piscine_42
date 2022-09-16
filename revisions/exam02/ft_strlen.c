@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 13:13:43 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/15 19:39:26 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/15 10:25:40 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/15 10:31:05 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <stdio.h>
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+int	ft_strlen(char 	*str)
+{
+	int	size;
 
-#endif
+	size = 0;
+	while (str[size])
+		size ++;
+	
+	return (size);
+}
+
+int	main(void)
+{
+	char	str[] = "blabloublabloublou";
+
+	printf("%d\n", ft_strlen(str));
+}

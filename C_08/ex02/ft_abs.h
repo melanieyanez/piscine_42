@@ -6,12 +6,12 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:42:27 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/14 13:28:49 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/15 19:45:24 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-# define ABS(Value) ((Value < 0) ? -Value : Value); 
+# define ABS(Value) ((Value < 0) ? -Value : Value) 
 #endif

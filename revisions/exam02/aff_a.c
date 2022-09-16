@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   aff_a.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 13:13:43 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/15 19:39:26 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/15 10:03:10 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/16 11:31:04 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <unistd.h>
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+int	main(int argc, char *argv[])
+{
+	int		i;
 
-#endif
+	if (argc != 2)
+	{
+		write(1, "a", 1);
+		write(1, "\n", 1);
+	}
+	else
+	{
+		i = 0;
+		while (argv[1][i])
+		{
+			if (argv[1][i] == 'a')
+			{
+				write(1, &argv[1][i], 1);
+				break;
+			}
+			i ++;
+		}
+		write(1, "\n", 1);
+	}
+}

@@ -6,18 +6,16 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:51:39 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/14 13:09:21 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/15 13:57:13 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
 #include <stdio.h>
 
-int	check_size(char *tab, int size)
+int	check_size(int size)
 {
 	if (size == 0)
-	{
 		return (1);
-	}
 	return (0);
 }
 
@@ -30,7 +28,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		l;
 
 	tab = malloc(sizeof(char) * size);
-	if (check_size(tab, size) == 1)
+	if (check_size(size) == 1)
 		return (tab);
 	i = 0;
 	k = 0;
@@ -42,7 +40,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		l = -1;
 		while (sep[++l])
 		{
-			if (i != size)
+			if (i < size)
 				tab[k++] = sep[l];
 		}
 	}
@@ -51,5 +49,6 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 /*int	main(int argc, char *argv[])
 {
+	(void)argc;
 	printf("%s\n", ft_strjoin(3, argv, " abc "));
 }*/

@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 13:13:43 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/15 19:39:26 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/15 10:31:22 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/15 10:35:40 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <stdio.h>
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+void	ft_swap(int *a, int *b)
+{
+	int	c;
 
-#endif
+	c = *a;
+	*a = *b;
+	*b = c;
+}
+
+int	main(void)
+{
+	int a;
+	int b;
+	
+	a = 1;
+	b = 5;
+
+	printf("AVANT a est egal a %d et b a %d\n", a, b);
+	ft_swap(&a, &b);
+	printf("APRES a est egal a %d et b a %d\n", a, b);
+}

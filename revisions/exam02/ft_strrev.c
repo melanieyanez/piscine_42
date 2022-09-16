@@ -1,22 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 13:13:43 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/15 19:39:26 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/15 11:41:13 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/16 10:56:47 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <stdio.h>
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+char	*ft_strrev(char *str)
+{
+	int	size;
+	int	i;
+	char temp;
 
-#endif
+	size = 0;
+	while (str[size])
+	{
+		size ++;
+	}
+
+	i = 0;
+	while (i != size/2)
+	{
+		temp = str[i];
+		str[i] = str[size - i - 1];
+		str[size - i - 1] = temp;
+		i ++;
+	}
+
+	return (str);
+}
+
+int	main(void)
+{
+	char	str[] = "Haricot vert";
+
+	printf("%s\n", str);
+	ft_strrev(str);
+	printf("%s\n", str);
+	return (0);
+}

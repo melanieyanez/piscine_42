@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   first_word.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 13:13:43 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/15 19:39:26 by myanez-p         ###   ########.fr       */
+/*   Created: 2022/09/15 11:10:07 by myanez-p          #+#    #+#             */
+/*   Updated: 2022/09/15 11:40:56 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <unistd.h>
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
+int	main(int argc, char *argv[])
+{
+	int	i;
 
-#endif
+	i = 0;	
+	if (argc != 2)
+		write(1, "\n", 1);
+	else
+	{
+		while (argv[1][i] == ' ' || argv[1][i] == '\t')
+			i ++;
+		while (argv[1][i] != ' ' && argv[1][i] != '\t' && argv[1][i] != '\0')
+		{
+			write(1, &argv[1][i], 1);
+			i ++;
+		}
+		write(1, "\n", 1);
+	}
+}
