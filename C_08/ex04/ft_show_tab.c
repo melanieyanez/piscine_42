@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:18:28 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/16 10:23:29 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/18 18:32:42 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,18 @@ void	ft_putchar(char c)
 
 void	ft_putstr(char	*str)
 {
-	while (*str != '\0')
+	int	i;
+	
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write(1, str, 1);
-		str++;
+		write(1, &str[i], 1);
+		i++;
 	}
 }
 
 void	ft_dispnbr(int i, int *tab)
 {
-	i = 0;
 	while (i >= 0)
 	{
 		ft_putchar(tab[i] + '0');
@@ -67,7 +69,6 @@ void	ft_putnbr(int nb)
 void	ft_show_tab(struct s_stock_str *par)
 {
 	int	i;
-	printf("ICI %s\n", par[0].str);	
 
 	i = 0;
 	while (par[i].str)
