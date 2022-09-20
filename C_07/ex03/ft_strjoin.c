@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:51:39 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/19 10:37:28 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/20 10:35:35 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -34,7 +34,7 @@ char	*ft_strcat(char *dest, char *src)
 		dest[size_dest + i] = src[i];
 		i ++;
 	}
-	dest[size_dest + i] = '\0';
+	dest[size_dest + i] = 0;
 	return (dest);
 }
 
@@ -46,13 +46,15 @@ int	get_size(int size, char **strs, char *sep)
 	if (size == 0)
 		return (1);
 	i = 0;
+	result = 0;
 	while (i < size)
 	{
 		result = result + ft_strlen(strs[i]);
 		i ++;
 	}
 	result = result + ft_strlen(sep) * (size - 1);
-	return (result);
+	printf(" result = %d\n", result);
+	return (result + 1);
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
@@ -61,8 +63,9 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		i;
 
 	tab = malloc(sizeof(char) * get_size(size, strs, sep));
-	if (!tab || size < 0)
+	if (!tab)
 		return (NULL);
+	tab[0] = 0;
 	if (size == 0)
 		return (tab);
 	i = 0;
@@ -73,6 +76,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 			ft_strcat(tab, sep);
 		i ++;
 	}
+	tab[ft_strlen(tab)] = '\0';
 	return (tab);
 }
 
@@ -86,15 +90,38 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	char	*strs[5];
 	int		size = 5;
-	char	*sep = ";";
+	char	*sep = "1234";
 
-	strs[0] = "a";
-	strs[1] = "b";
-	strs[2] = "c";
+	strs[0] = "lol";
+	strs[1] = "pouic";
+	strs[2] = "youpiiii";
 	strs[3] = "dfdfdffd";
 	strs[4] = "ccccc";
 	char	*dest = ft_strjoin(size, strs, sep);
 	printf("dest = %s", dest);
 	free(dest);
 	return (0);
+}*/
+
+/*int	main(void)
+{
+	char *strs[4];
+	int	size = 4;
+	char *sep = "1234";
+	int i;
+
+	strs[0] = "lol";
+	strs[1] = "pouic";
+	strs[2] = "";
+	strs[3] = "youpiiiii";
+	
+	printf("%d\n", ft_strlen("absc"));
+	char *dest = ft_strjoin(size, strs, sep);
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		printf("%c\n", dest[i]);
+		i ++;
+	}
+	free(dest);
 }*/
