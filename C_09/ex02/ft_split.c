@@ -6,7 +6,7 @@
 /*   By: myanez-p <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:36:01 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/09/20 20:27:03 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:07:28 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ char	*get_next_wd(char *str, char *charset, int *index)
 		size ++;
 	}
 	result = malloc(sizeof(char) * (size + 1));
+	if (!result)
+		return (NULL);
 	while (i < size)
 	{
 		result[i] = str[*index];
@@ -98,15 +100,16 @@ char	**ft_split(char *str, char *charset)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (i < nb_wd)
+	while (i < nb_wd - 1)
 	{
 			tab[i] = get_next_wd(str, charset, &j);
 			i ++;
 	}	
+	tab[i] = 0;
 	return (tab);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	**dest;
 	int		i;
@@ -121,4 +124,4 @@ int	main(void)
 		printf("%s\n", dest[i]);
 		i ++;
 	}
-}
+}*/
